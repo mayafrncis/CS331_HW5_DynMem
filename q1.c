@@ -6,6 +6,10 @@ int main() {
 	printf("Enter the number of elements: ");
 	scanf("%d", &num);
 	int* arr = (int*) malloc(sizeof(int) * num);
+	if (arr == NULL) {
+		printf("Memory allocation failed.");
+		return 1;
+	}
 	int sum = 0;
 	printf("Enter %d integers:", num);
 	for (int i = 0; i < num; i++) {

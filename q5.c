@@ -6,6 +6,10 @@ int main() {
 	printf("Enter the number of students: ");
 	scanf("%d", &n);
 	int* grades = (int *) malloc(sizeof(int) * n);
+	if (grades == NULL) {
+		printf("Memory allocation failed");
+		return 1;
+	}
 	printf("Enter the grades: ");
 	int max = 0;
 	int min = 100;

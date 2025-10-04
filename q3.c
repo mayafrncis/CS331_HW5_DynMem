@@ -3,8 +3,11 @@
 
 int main() {
 	int* arr = (int *) malloc(10 * sizeof(int));
-	printf("Enter 10  integers: ");\
-	int val;
+	if (arr == NULL) {
+  		printf("Memory allocation failed.\n");
+   		return 1;
+	}
+	printf("Enter 10  integers: ");
 	for (int i = 0; i < 10; i++)
 		scanf("%d", (arr + i));
 	arr = (int *) realloc(arr, 5 * sizeof(int));

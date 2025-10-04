@@ -6,10 +6,14 @@ int main() {
 	printf("Enter the number of elements: ");
 	scanf("%d", &num);
 	int* arr = (int*) calloc(num, sizeof(int));
+	if (arr == NULL) {
+		printf("Memory allocation failed");
+		return 1;
+	}
 	printf("Array after calloc:");
 	for (int i = 0; i < num; i++)
 		printf(" %d", *(arr + i));
-	printf("\nEnter %d integers: ", num);\
+	printf("\nEnter %d integers: ", num);
 	int val;
 	float sum = 0;
 	for (int i = 0; i < num; i++) {
