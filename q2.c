@@ -24,6 +24,6 @@ int main() {
 	printf("\nAverage of the array: %f\n", sum/num);
 
 	free(arr);
-	arr = null;
+	arr = NULL;
 	return 0;
 }
